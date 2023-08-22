@@ -1,0 +1,45 @@
+---
+title: "TP 1 - Tecnologia Digital VI"
+subtitle: "Ejercicio 3"
+author: "Canda - Cobian - Romero"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+## Ejercicio 3 - Experimento Propio
+
+```{r, echo=FALSE, fig.align='center'}
+source("./provided_functions.R")
+```
+
+Después de revisar los resultados obtenidos al introducir ruido en la variable de respuesta dentro de los datos de entrenamiento, tal como lo hicimos en el experimento 4, nos surgió la inquietud de llevar a cabo un enfoque similar, pero aplicado a las variables predictorias más significativas. El propósito es analizar cómo se ve afectado el rendimiento del modelo a medida que manipulamos los valores de estas variables predictorias.
+ 
+Con este fin, diseñamos un experimento en el cual introducimos diversas proporciones de ruido en las variables predictorias más relevantes. Nuestra intención es observar cómo, a medida que incrementamos la proporción de ruido añadido, el rendimiento del modelo disminuye. Además, nos interesa examinar cómo al modificar múltiples variables predictorias, esta degradación del rendimiento se acentúa aún más.
+ 
+Para estudiar el efecto de esto, realizamos el siguiente gráfico, donde tenemos separado por 5 paneles, los que representan la cantidad de variables predictorias a las que se le agregó ruido, comenzando desde la más importante.
+ 
+(Observación: Dado los datasets utlizados patra este experimetno, elegimos tomar desde la más importanteshasta la 5ta más imprtante, de forma que se termine modificando una cantidad significaiva de valores utilizados para predecir)
+
+
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics("./outputs/plots/plot_exp_propio.jpg")
+```
+
+A primera vista, vemos que el gráfico presenta una relación clara entre el rendimiento del modelo y la proporción de valores modificados de las variables predictorias, denominado "noise level".Al observar las líneas trazadas, se evidencia que a medida que la proporción de valores modificados aumenta, el rendimiento del modelo disminuye. Esto indica una fuerte correlación negativa entre el nivel de ruido introducido en los datos y el rendimiento del modelo.
+ 
+Además, se destaca otro patrón considerable en el gráfico. A medida que se incrementa la cantidad de variables predictoras en las que se introduce ruido, el descenso en el rendimiento del modelo se acentúa aún más. Esta observación sugiere que la influencia del ruido es acumulativa y que la inclusión de ruido en múltiples variables predictoras tiene un impacto multiplicativo en la calidad del modelo.
+ 
+Es importante destacar que todos los gráficos de línea comienzan desde un mismo punto, con un noise level igual a 0. Esto proporciona una línea base de comparación para el rendimiento inicial del modelo antes de que se introduzca cualquier ruido en los datos.
+
+
+Comparando con el experimento 4, una de las cosas que nos llamó la atención fue que al agregar ruido en las variables predictoras, la disminución de rendimiento no fue tan abrupta como en el experimento 4. 
+
+En base esto surgen distintas intuiciones/hipótesis de por qué podría ocurrir dicha observación:
+
+- En primer lugar, creemos que al modificar directamente la variable de respuesta, el modelo se ve mucho más afectado, porque el modelo estaría “aprendiendo mal”, llevando a que el modelo aprenda patrones que en realidad no existen o que ignore patrones que sí son reales.
+- Otra intuición que tenemos,es que en los conjuntos de datos utilizados puede haber cierta correlación entre las variables predictoras, es decir , contienen información similar o redundante. Lo que explica que si perturbas una característica, es probable que otras características correlacionadas con ella puedan ayudar a "compensar" el ruido.
+- Como ultima hipótesis, es que si introducís ruido en una o más variables predictoras(las más importantes), y  el dataset tiene más atributos de cierta importancia, el modelo tiene otros atributos/variables predictoras, para aprender y hacer una predicción correcta.
+
+En conclusión, estos hallazgos subrayan la necesidad de mantener la calidad de los datos y reducir el ruido en las variables predictoras para lograr un rendimiento óptimo en el modelo predictivo.
+ 
+

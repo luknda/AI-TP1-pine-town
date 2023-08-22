@@ -1,9 +1,17 @@
+---
+title: "TP 1 - Tecnologia Digital VI"
+subtitle: "Ejercicio 1"
+author: "Canda - Cobian - Romero"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
 # Selección de un conjunto de datos adicional
 
 Los datos seleccionados se obtuvieron de <https://www.kaggle.com/datasets/akshaydattatraykhare/diabetes-dataset>
 
 ```{r}
-df = read.csv("C:\\Users\\crash\\OneDrive\\Documents\\AI-TP1-pine-town\\data\\diabetes-vid.csv")
+df = read.csv("./data/diabetes-vid.csv")
 head(df)
 ```
 
