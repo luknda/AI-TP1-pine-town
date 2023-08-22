@@ -1,0 +1,30 @@
+# Selección de un conjunto de datos adicional
+
+Los datos seleccionados se obtuvieron de <https://www.kaggle.com/datasets/akshaydattatraykhare/diabetes-dataset>
+
+```{r}
+df = read.csv("C:\\Users\\crash\\OneDrive\\Documents\\AI-TP1-pine-town\\data\\diabetes-vid.csv")
+head(df)
+```
+
+Contiene 768 observaciones y 9 variables , 8 explicativas y 1 de respuesta. Todas los atributos predictores son numéricos, el de respuesta es categórico. No tiene valores faltantes. Se intentará predecir la presencia de diabetes en pacientes del sexo femenino, con al menos 21 años.
+
+**Pregnancies**: Cantidad de embarazos.
+
+**Glucose**: Nivel de glucosa en sangre.
+
+**BloodPreassure**: Medida de presión arterial.
+
+**SkinThickness**: Grosor de la piel.
+
+**Insulin**: Nivel de insulina en sangre.
+
+**BMI**: Body Mass Index.
+
+**DiabetesPedigreeFunction**: Porcentaje de Diabetes.
+
+**Age**: Edad.
+
+**Outcome**: Expresa el resultado final, 1 es Yes, 0 es No.
+
+## 
