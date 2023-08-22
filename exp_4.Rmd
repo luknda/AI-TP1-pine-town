@@ -1,12 +1,24 @@
+---
+title: "TP 1"
+subtitle: "Tecnologia Digital VI"
+author: "Canda - Cobian - Romero"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+# Ejercicio 2
+
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+
+## Experimento 1
 ```{r}
-source("C:\\Users\\crash\\OneDrive\\Documents\\AI-TP1-pine-town\\exp_4.R")
+source("./provided_functions.R")
+knitr::include_graphics("./outputs/plots/plot_exp_4.jpg")
 ```
 
 # Experimentos Sugeridos (Opción 4)
 
 El gráfico (a cont.) ilustra una relación clara y coherente entre el incremento en la proporción de valores modificados en una variable de respuesta designada como "noise level", y la correspondiente disminución del valor del "Max Mean AUC". Esto indica que a medida que se aumenta la proporción de valores alterados en la variable de respuesta, se observa un declive gradual en el rendimiento global del modelo, según se refleja en el Max Mean AUC. Esta tendencia sugiere que la introducción de una mayor proporción de valores modificados en la variable de respuesta está directamente relacionada con la disminución de la capacidad del modelo para efectuar predicciones precisas y consistentes.
-
-![](outputs/plots/plot_exp_4.jpg)
 
 Una posible explicación para este fenómeno podría radicar en que los valores modificados introducen un nivel de ruido y variabilidad innecesario en la variable de respuesta, lo que dificulta que el modelo identifique patrones significativos y relaciones consistentes en los datos. Como resultado, el modelo podría enfrentar dificultades para generalizar a partir de los patrones genuinos y realizar predicciones coherentes en datos nuevos. Este efecto podría ser especialmente prominente si los valores modificados introducen patrones artificiales que difieren significativamente de los patrones reales presentes en los datos, lo que afectaría adversamente la capacidad del modelo para hacer predicciones confiables.
 

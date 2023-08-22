@@ -1,16 +1,24 @@
 ---
----
+title: "TP 1"
+subtitle: "Tecnologia Digital VI"
+author: "Canda - Cobian - Romero"
+date: "`r Sys.Date()`"
+output: pdf_document
 ---
 
+# Ejercicio 2
+
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+
+## Experimento 1
 ```{r}
-source("C:\\Users\\crash\\OneDrive\\Documents\\AI-TP1-pine-town\\exp_1.R")
+source("./provided_functions.R")
+knitr::include_graphics("./outputs/plots/plot_exp_1.jpg")
 ```
 
-# Experimentos Sugeridos (Opción 1)
 
 En primer lugar, se destaca (gráfico a cont.) una clara correlación entre la proporción de valores faltantes (NANs) y el rendimiento del modelo. La evidencia gráfica demuestra que a medida que esta proporción aumenta, el valor del área bajo la curva (AUC) disminuye significativamente. Un ejemplo ilustrativo es la comparación entre un 0,1 de NA's en los datos de entrenamiento y una proporción de 0.9, donde el AUC es considerablemente mayor en el primer caso.
 
-![](outputs/plots/plot_exp_1.jpg)
 
 En cuanto a la estrategia de manejo de valores faltantes, se observa que el enfoque no imputado, permitiendo que el árbol de decisión gestione los NANs, alcanza el máximo rendimiento AUC en los cuatro escenarios analizados. Esto sugiere que, en estos conjuntos de datos específicos, el manejo de valores faltantes por parte de los árboles de decisión supera a la imputación con medidas como el promedio o la moda.
 
